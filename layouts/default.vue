@@ -1,39 +1,36 @@
 <template>
   <v-app id="inspire">
-    <v-system-bar class="bg-primary" height="35">
+    <v-system-bar class="bg-grey-darken-4 px-16" height="35">
+      <SliderText />
       <v-spacer></v-spacer>
 
-      <v-icon color="grey-darken-4" size="30" class="mx-2">mdi-facebook</v-icon>
-      <v-icon color="grey-darken-4" size="30" class="mx-2"
-        >mdi-instagram</v-icon
-      >
-      <v-icon color="grey-darken-4" size="30" class="mx-2">mdi-twitter</v-icon>
+      <v-icon color="primary" size="30" class="mx-2">mdi-facebook</v-icon>
+      <v-icon color="primary" size="30" class="mx-2">mdi-instagram</v-icon>
+      <v-icon color="primary" size="30" class="mx-2">mdi-twitter</v-icon>
     </v-system-bar>
 
-    <v-app-bar height="80" class="px-16">
+    <v-app-bar height="80" class="px-16" elevation="0">
       <v-app-bar-nav-icon
         class="d-flex d-sm-none"
         @click="drawer = !drawer"
       ></v-app-bar-nav-icon>
 
-      <v-img
-        height="auto"
-        max-width="190"
-        class="rounded-lg"
-        src="/images/logo.png"
-      />
+      <v-img height="auto" max-width="190" src="/images/logo.png" />
 
       <v-tabs v-model="tab" class="ml-7" density="compact" color="primary">
         <v-tab
           slider-color="primary"
           class="font-weight-bold text-capitalize"
-          :value="1"
+          >Beranda</v-tab
+        >
+         <v-tab
+          slider-color="primary"
+          class="font-weight-bold text-capitalize"
           >Bisnis</v-tab
         >
         <v-tab
           slider-color="primary"
           class="font-weight-bold text-capitalize"
-          :value="2"
           >Mitra Kami</v-tab
         >
       </v-tabs>
@@ -45,7 +42,7 @@
         variant="solo"
       >
         <template v-slot:append-inner>
-            <v-icon color="primary">mdi-magnify</v-icon>
+          <v-icon color="primary">mdi-magnify</v-icon>
         </template>
       </v-text-field>
 
@@ -64,20 +61,9 @@
       <!--  -->
     </v-navigation-drawer>
 
-    <v-main class="bg-grey-lighten-2">
-      <v-container>
-        <v-row>
-          <template v-for="n in 4" :key="n">
-            <v-col class="mt-2" cols="12">
-              <strong>Category {{ n }}</strong>
-            </v-col>
-
-            <v-col v-for="j in 6" :key="`${n}${j}`" cols="6" md="2">
-              <v-sheet height="150"></v-sheet>
-            </v-col>
-          </template>
-        </v-row>
-      </v-container>
+    <v-main class="bg-grey-lighten-6">
+      <Banner />
+        <NuxtPage/>
     </v-main>
   </v-app>
 </template>
