@@ -42,7 +42,7 @@
           </p>
         </v-col>
         <v-col v-for="n in dataPekerjaan" cols="12" md="3" sm="4" xs="12">
-          <v-card class="elevation-3">
+          <v-card class="elevation-3 rounded-md">
             <template v-slot:prepend>
               <v-icon size="70" color="ungu">mdi-account</v-icon>
             </template>
@@ -53,12 +53,12 @@
               <v-list>
                 <v-list-item
                   class="font-weight-bold"
-                  v-for="item in n.listWork"
+                  v-for="(item,n) in n.listWork"
                   :key="item.name"
                 >
                   <v-list-item-title
-                    class="font-weight-bold text-grey-darken-3"
-                    >{{ item.name }}</v-list-item-title
+                    class="text-grey-darken-3"
+                    >{{n+1}}. {{ item.name }}</v-list-item-title
                   >
                 </v-list-item>
               </v-list>

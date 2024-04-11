@@ -65,6 +65,8 @@
       <Banner />
         <NuxtPage/>
     </v-main>
+
+     <Footer/>
   </v-app>
 </template>
 
