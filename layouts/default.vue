@@ -19,16 +19,19 @@
 
       <v-tabs v-model="tab" class="ml-7" density="compact" color="primary">
         <v-tab
+         to="/"
           slider-color="primary"
           class="font-weight-bold text-capitalize"
           >Beranda</v-tab
         >
          <v-tab
+          to="/bisnis"
           slider-color="primary"
           class="font-weight-bold text-capitalize"
           >Bisnis</v-tab
         >
         <v-tab
+          to="/mitra"
           slider-color="primary"
           class="font-weight-bold text-capitalize"
           >Mitra Kami</v-tab

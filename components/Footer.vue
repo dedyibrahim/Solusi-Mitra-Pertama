@@ -16,13 +16,9 @@
             </v-col>
             <v-col cols="12" md="9" sm="12">
               <v-card class="bg-primary text-center">
-                <v-card-text class="white--text text-h6">
-                  "Sistem Informasi Pengembangan Kompetensi Aparatur adalah
-                  rangkaian informasi dan data mengenai Pengembangan Kompetensi
-                  yang disususun secara sistematis, menyeluruh, dan terintegrasi
-                  dengan berbasis teknologi."<br>
-                  <span>" PP LAN No.10 Tahun 2018 "</span>
-                </v-card-text>
+                <v-card-text class="white--text text-h6 ">
+                  <p class="text-justify text-h6">Selamat datang di PT Solusi Mitra Utama Kami adalah mitra terpercaya dalam layanan outsourcing yang memberikan solusi efisien dan inovatif untuk memenuhi kebutuhan bisnis Anda. Dengan tim profesional dan kualitas terjamin, kami siap membantu perusahaan Anda mencapai tujuan bisnis dengan lebih efektif.
+                  </p></v-card-text>
               </v-card>
             </v-col>
           </v-row>
@@ -33,7 +29,7 @@
                 <v-col cols="12" md="3" sm="6"
                   ><v-list density="compact" class="bg-transparent">
                     <v-list-subheader class="text-primary text-h5">
-                      <b>LMS PIM</b></v-list-subheader
+                      <b>Company</b></v-list-subheader
                     >
   
                     <v-list-item
@@ -41,15 +37,15 @@
                       :to="item.link"
                       :key="i"
                       :value="item"
-                      color="primary"
+                      color="ungu"
                     > 
-                      <v-list-item-title class="text-primary" v-text="item.text"></v-list-item-title>
+                      <v-list-item-title class="text-ungu" v-text="item.text"></v-list-item-title>
                     </v-list-item> </v-list
                 ></v-col>
                 <v-col cols="12" md="3" sm="6"
                   ><v-list density="compact" class="bg-transparent">
                     <v-list-subheader class="text-primary text-h5"
-                      ><b>ASN</b></v-list-subheader
+                      ><b>Mitra</b></v-list-subheader
                     >
   
                     <v-list-item
@@ -57,8 +53,8 @@
                       :key="i"
                       :value="item"
                       :to="item.link"
-                       color="primary"
-                       class="text-primary" 
+                       color="ungu"
+                       class="text-ungu" 
                     >
                       {{ item.text }}
                     </v-list-item>
@@ -67,7 +63,7 @@
                 <v-col cols="12" md="3" sm="6"
                   ><v-list density="compact"  class="bg-transparent">
                     <v-list-subheader class="text-primary text-h5"
-                      ><b>PANDUAN</b></v-list-subheader
+                      ><b>Bisnis</b></v-list-subheader
                     >
   
                     <v-list-item
@@ -75,9 +71,8 @@
                       :key="i"
                       :to="item.link"
                        :value="item"
-                      color="primary"
-                      class="text-primary" 
-                    >
+                       color="ungu"
+                       class="text-ungu"     >
                       <v-list-item-title v-text="item.text"></v-list-item-title>
                     </v-list-item> </v-list
                 ></v-col>
@@ -92,20 +87,19 @@
                       :key="i"
                       :to="item.link"
                        :value="item"
-                      color="primary"
-                      class="text-primary" 
-                    >
+                       color="ungu"
+                       class="text-ungu"      >
                       <v-list-item-title v-text="item.text"></v-list-item-title>
                     </v-list-item> </v-list
                 ></v-col>
               </v-row>
             </v-col>
             <v-col cols="12" md="4" sm="12" class="mb-2">
-              <v-card elevation="0" color="primary">
+              <v-card elevation="0" color="ungu">
                 <v-card-text >
                   <v-list class="bg-transparent">
                     <v-list-subheader class="text-white text-h6  text-center " 
-                      ><b>  Contact Center LMS PIM</b></v-list-subheader
+                      ><b>  Contact </b></v-list-subheader
                     >
   
                     <v-list-item
@@ -145,8 +139,8 @@
             </v-col>
           </v-row>
           <hr />
-          <v-row class="text-primary">
-            <v-col>&copy; <b>SIBANGKOM ASN 2023</b></v-col>
+          <v-row class="text-ungu">
+            <v-col>&copy; <b>PT Solusi Mitra Pertama 2023</b></v-col>
             <v-col class="text-right">
               <a style="text-decoration: none;">Kebijakan Privasi</a> &nbsp;
               &nbsp;
@@ -164,11 +158,11 @@
     data() {
       return {
         items: [
-          { text: "Formulir Pengaduan", icon: "mdi-note" },
-          { text: "Live Chat", icon: "mdi-forum-outline" }
+          { text: "(021) 87351197", icon: "mdi-phone" },
+          { text: "Solusimitrautama@gmail.com", icon: "mdi-mail" }
         ],
         items2: [
-          { text: "Senin-Minggu <br> Pukul 08:00 - 20:00 WIB", icon: "mdi-clock" }
+          { text: "Senin-sabtu <br> Pukul 09:00 - 18:00 WIB", icon: "mdi-clock" }
         ],
         menulmspim: [
           {
@@ -176,53 +170,42 @@
             link:'/'
           },
           {
-            text: "Tentang LMS PIM",
+            text: "About Us",
             link:'/'
           }
         ],
         menuasn: [
           {
-            text: "Masuk",
+            text: "Lowongan Kerja",
             link:'/login'
           },
           {
-            text: "Tanya Jawab",
+            text: "Grup Loker",
             link:'/'
           },
-          {
-            text: "Dasar Hukum",
-            link:'/'
-          }
         ],
         menulainnya: [
           {
             text: "Pengumuman"
           },
-          {
-            text: "Artikel"
-          }
         ],
         menupanduan: [
           {
-            text: "Mentor",
+            text: "Hubungi Kami",
             link:"/"
           },
           {
-            text: "Pembimbing",
+            text: "Outsorcing",
             link:"/"
           },
           {
-            text: "Peserta",
+            text: "Customer Service",
             link:"/"
           },
           {
-            text: "Pengajar",
+            text: "Sales Promotor",
             link:"/"
           },
-          {
-            text: "Penguji",
-            link:"/"
-          }
         ],
   
         icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"]

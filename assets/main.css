@@ -1,8 +1,7 @@
-/* main.css */
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 300;
+    font-weight: 100;
     font-display: swap;
-    src: url('./fonts/Roboto-Light.ttf') format('truetype');
+  src: url("~/assets/font/BalooThambi2-Medium.ttf") format("truetype");
 }

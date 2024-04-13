@@ -33,15 +33,15 @@ export default {
           title: "Perusahaan Outsourcing & BPO On-Demand Indonesia",
           description:
             "Solusi Mitra Utama perusahaan outsorcing penyalur tenaga kerja on-demand, kami menyediakan tenaga kerja fleksibel, berpengalaman dan terpercayaa",
-          src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
+          src: "./images/banner2.jpg",
         },
         {
           color: "ungu",
           title: "Empowering Enterprises, Transforming Lives with BetterPlace",
           description:
             "BetterPlace merupakan perusahan penyedia platform human capital SaaS terbesar di Asia yang membantu perusahaan dalam hal manajemen tenaga kerja. Melalui teknologi HR yang komprehensif dan terintegrasi, BetterPlace telah membantu 1500 bisnis yang tersebar di 500 lokasi di wilayah Asia Pasifik, India, dan GCC.",
-          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
-        },
+            src: "./images/banner1.jpg",
+         },
       ],
     };
   },

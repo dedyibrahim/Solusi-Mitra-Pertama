@@ -5,7 +5,7 @@
         <v-col cols="12" md="6" sm="6" xs="6">
           <p class="text-h6 font-weight-bold text-ungu">About Us</p>
           <p class="text-h4 font-weight-bold text-primary">
-            PT Solusi Mitra Utama
+            PT Solusi Mitra Pertama
           </p>
           <br />
           <p class="text-h6 text-grey-darken-4 text-justify">
@@ -22,7 +22,7 @@
           <v-img
             height="auto"
             class="rounded-lg"
-            src="https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg"
+            src="../public/images/about.jpg"
           />
         </v-col>
       </v-row>
@@ -36,15 +36,20 @@
           <p class="text-h4 text-center font-weight-bold text-ungu">
             Industri dan Pekerjaan yang kami Salurkan
           </p>
-          <p class="text-h6 text-center font-weight-bold text-grey-darken-3">
+          <p class="text-h6 text-center text-grey-darken-3">
             Pilih pekerjaan sesuai bakat dan minat anda. Temukan pekerjaan di
-            sekitar anda di MyRobin
+            sekitar anda di PT Solusi Mitra Pertama
           </p>
         </v-col>
         <v-col v-for="n in dataPekerjaan" cols="12" md="3" sm="4" xs="12">
           <v-card class="elevation-3 rounded-md">
             <template v-slot:prepend>
-              <v-icon size="70" color="ungu">mdi-account</v-icon>
+              <v-avatar
+               size="100"
+               width="auto"
+               rounded="0"
+               :image="n.icon"
+                ></v-avatar>
             </template>
             <v-card-title class="text-primary text-h6 font-weight-bold">
               {{ n.title }}</v-card-title
@@ -52,13 +57,13 @@
             <v-card-text>
               <v-list>
                 <v-list-item
+                  style="min-height: 0px"
                   class="font-weight-bold"
-                  v-for="(item,n) in n.listWork"
+                  v-for="(item, n) in n.listWork"
                   :key="item.name"
                 >
-                  <v-list-item-title
-                    class="text-grey-darken-3"
-                    >{{n+1}}. {{ item.name }}</v-list-item-title
+                  <v-list-item-title class="text-grey-darken-3"
+                    >{{ n + 1 }}. {{ item.name }}</v-list-item-title
                   >
                 </v-list-item>
               </v-list>
@@ -72,15 +77,34 @@
     </v-container>
   </v-sheet>
 
-  <v-sheet class="bg-primary">
+  <v-parallax height="300px" src="/images/indobuild.png">
+    <v-sheet class="bg-transparent">
+      <v-container>
+        <v-row class="my-16">
+          <v-col cols="12" md="12" sm="12" xs="12">
+            <p class="text-h4 text-center font-weight-bold text-primary">
+              Kami seleksi dan sesuaikan dengan kebutuhan bisnis Anda
+            </p>
+            <p class="text-h6 text-center">
+              Mulai terhubung dengan jaringan lebih dari 2 juta tenaga siap
+              kerja kami
+            </p>
+          </v-col></v-row
+        ></v-container
+      ></v-sheet
+    >
+  </v-parallax>
+
+  <v-sheet class="bg-grey-lighten-3">
     <v-container>
       <v-row class="my-16">
         <v-col cols="12" md="12" sm="12" xs="12">
-          <p class="text-h4 text-center font-weight-bold text-white">
-            Kami seleksi dan sesuaikan dengan kebutuhan bisnis Anda
+          <p class="text-h4 text-center font-weight-bold text-primary">
+            Klien Kami
           </p>
-          <p class="text-h6 text-center font-weight-bold text-grey-darken-3">
-            Mulai terhubung dengan jaringan lebih dari 2 juta tenaga siap kerja kami
+          <p class="text-h6 text-center text-grey-darken-3">
+            PT Solusi Mitra Pertama telah dipercaya berbagai bisnis lintas
+            industri
           </p>
         </v-col></v-row
       ></v-container
@@ -95,6 +119,7 @@ export default {
       dataPekerjaan: [
         {
           title: "WareHouse",
+          icon: "/images/warehouse.png",
           listWork: [
             { name: "Staf Gudang" },
             { name: "Operator Warehouse" },
@@ -105,6 +130,7 @@ export default {
         },
         {
           title: "Logistik",
+          icon: "/images/logistik.png",
           listWork: [
             { name: "Kurir" },
             { name: "Delivery" },
@@ -115,6 +141,7 @@ export default {
         },
         {
           title: "Penjualan & Pelayanan",
+          icon: "/images/penjualan.png",
           listWork: [
             { name: "Field Sales" },
             { name: "Telemarketer" },
@@ -125,6 +152,7 @@ export default {
         },
         {
           title: "Manufaktur",
+          icon: "/images/manufaktur.png",
           listWork: [
             { name: "Security" },
             { name: "Pekerja Lepas" },
@@ -135,6 +163,7 @@ export default {
         },
         {
           title: "Konstruksi & Bangunan",
+          icon: "/images/kontruksi.png",
           listWork: [
             { name: "Surveyor" },
             { name: "Pekerja Konstruksi" },
@@ -145,6 +174,7 @@ export default {
         },
         {
           title: "Dapur & Pantri",
+          icon: "/images/chef.png",
           listWork: [
             { name: "Chef" },
             { name: "Cook Helper" },
@@ -155,6 +185,7 @@ export default {
         },
         {
           title: "Hotel & Restaurant",
+          icon: "/images/hotel.png",
           listWork: [
             { name: "Waiter & Waiters" },
             { name: "Operator Warehouse" },
@@ -165,6 +196,7 @@ export default {
         },
         {
           title: "Kebersihan",
+          icon: "/images/kebersihan.png",
           listWork: [
             { name: "Cleaning Service" },
             { name: "Office Boy" },
