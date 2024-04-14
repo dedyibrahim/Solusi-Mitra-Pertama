@@ -64,8 +64,24 @@
       </v-container>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" temporary>
-      <!--  -->
+    <v-navigation-drawer v-model="drawer"   temporary>
+      <v-list color="transparent">
+          <v-list-item to="/"  title="Beranda"></v-list-item>
+          <v-list-item to="/bisnis"  title="Bisnis"></v-list-item>
+          <v-list-item to="/mitra"  title="Mitra Kami"></v-list-item>
+        </v-list>
+
+        <template v-slot:append>
+          <div class="pa-2">
+            <v-btn class="bg-primary text-capitalize " block
+          >Lamar Kerja
+
+          <template v-slot:append>
+            <v-icon>mdi-pen</v-icon>
+          </template>
+        </v-btn>
+          </div>
+        </template>
     </v-navigation-drawer>
 
     <v-main class="bg-grey-lighten-6">

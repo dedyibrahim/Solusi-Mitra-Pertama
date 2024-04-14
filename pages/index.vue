@@ -2,7 +2,8 @@
   <v-sheet class="bg-white">
     <v-container>
       <v-row class="my-16">
-        <v-col cols="12" md="6" sm="6" xs="6">
+        <v-col cols="12" md="6" sm="6" xs="6"    @transition-enter="onEnter"
+          @transition-leave="onLeave">
           <p class="text-h6 font-weight-bold text-ungu">About Us</p>
           <p class="text-h4 font-weight-bold text-primary">
             PT Solusi Mitra Pertama
@@ -38,7 +39,13 @@
           </p>
         </v-col>
         <v-col v-for="n in dataPekerjaan" cols="12" md="3" sm="4" xs="12">
-          <v-card class="elevation-3 rounded-md">
+          <v-hover v-slot="{ isHovering, props }">
+          <v-card class="elevation-3 rounded-md"  v-bind="props"
+                    :elevation="isHovering ? 12 : 2" 
+                    :class="{
+                      'text-primary on-hover  animate__animated animate__pulse':
+                        isHovering,
+                    }">
             <template v-slot:prepend>
               <v-avatar size="100" width="auto" rounded="0" :image="n.icon"></v-avatar>
             </template>
@@ -53,6 +60,7 @@
               </v-list>
             </v-card-text>
           </v-card>
+        </v-hover>
         </v-col>
       </v-row>
       <p class="text-center text-h6 font-weight-bold text-grey-darken-4">
@@ -89,12 +97,17 @@
           </p>
 
           <v-row>
-            <v-col cols="12" sm="2" xs="2" md="2" v-for="n in 17">
-              <v-card class="mx-auto mt-5 elevation-0 bg-transparent" >
-                <v-card-text>
+            <v-col cols="12" sm="1" xs="1" md="2" v-for="n in 17">
+              <v-hover v-slot="{ isHovering, props }">
+              <v-card class="mx-auto mt-5 elevation-0 "   v-bind="props"
+                    :elevation="isHovering ? 12 : 2" 
+                    :class="{
+                      'text-primary on-hover  animate__animated animate__pulse':
+                        isHovering,
+                    }">
                   <v-img height="auto" cover class="rounded-lg my-auto" :src="'/images/client/' + n + '.png'" />
-                </v-card-text>
               </v-card>
+            </v-hover>
             </v-col>
           </v-row>
         </v-col></v-row></v-container></v-sheet>
@@ -102,6 +115,17 @@
 
 <script>
 export default {
+  methods: {
+    onEnter(el, done) {
+      alert("Asdsad")
+      this.animateClass = true;
+      setTimeout(done, 1000); // Mengatur durasi animasi (1 detik)
+    },
+    onLeave(el, done) {
+      this.animateClass = false;
+      setTimeout(done, 1000); // Mengatur durasi animasi (1 detik)
+    },
+  },
   data() {
     return {
       dataPekerjaan: [
