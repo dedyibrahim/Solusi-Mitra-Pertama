@@ -9,15 +9,19 @@
       <v-icon color="primary" size="30" class="mx-2">mdi-twitter</v-icon>
     </v-system-bar>
 
-    <v-app-bar height="80" class="px-16" elevation="0">
-      <v-app-bar-nav-icon
+    <v-app-bar height="80"  elevation="0">
+      <template v-slot:prepend>
+        <v-app-bar-nav-icon
         class="d-flex d-sm-none"
         @click="drawer = !drawer"
       ></v-app-bar-nav-icon>
+  </template>
+  <v-container class="pa-0 fill-height">
+    
+    
+      <v-img height="auto"   max-width="190" src="/images/logo.png" />
 
-      <v-img height="auto" max-width="190" src="/images/logo.png" />
-
-      <v-tabs v-model="tab" class="ml-7" density="compact" color="primary">
+      <v-tabs v-model="tab" class="ml-7 d-sm-none d-md-flex d-none d-sm-flex d-md-none d-lg-flex" border="10" density="compact" color="primary">
         <v-tab
          to="/"
           slider-color="primary"
@@ -37,10 +41,10 @@
           >Mitra Kami</v-tab
         >
       </v-tabs>
-      <v-spacer></v-spacer>
+      <v-spacer class="d-sm-none d-md-flex d-none d-sm-flex"></v-spacer>
       <v-text-field
         density="compact"
-        class="mt-5 mx-3"
+        class="mt-5 mx-3 "
         placeholder="Cari Disini"
         variant="solo"
       >
@@ -49,15 +53,15 @@
         </template>
       </v-text-field>
 
-      <template v-slot:append>
-        <v-btn class="bg-primary text-capitalize"
+        <v-btn class="bg-primary text-capitalize d-sm-none d-md-flex d-none d-sm-flex"
           >Lamar Kerja
 
           <template v-slot:append>
             <v-icon>mdi-pen</v-icon>
           </template>
         </v-btn>
-      </template>
+     
+      </v-container>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" temporary>

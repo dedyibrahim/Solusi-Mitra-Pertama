@@ -19,11 +19,7 @@
           </p>
         </v-col>
         <v-col cols="12" md="6" sm="6" xs="6">
-          <v-img
-            height="auto"
-            class="rounded-lg"
-            src="../public/images/about.jpg"
-          />
+          <v-img height="auto" class="rounded-lg" src="../public/images/about.jpg" />
         </v-col>
       </v-row>
     </v-container>
@@ -44,27 +40,15 @@
         <v-col v-for="n in dataPekerjaan" cols="12" md="3" sm="4" xs="12">
           <v-card class="elevation-3 rounded-md">
             <template v-slot:prepend>
-              <v-avatar
-               size="100"
-               width="auto"
-               rounded="0"
-               :image="n.icon"
-                ></v-avatar>
+              <v-avatar size="100" width="auto" rounded="0" :image="n.icon"></v-avatar>
             </template>
             <v-card-title class="text-primary text-h6 font-weight-bold">
-              {{ n.title }}</v-card-title
-            >
+              {{ n.title }}</v-card-title>
             <v-card-text>
               <v-list>
-                <v-list-item
-                  style="min-height: 0px"
-                  class="font-weight-bold"
-                  v-for="(item, n) in n.listWork"
-                  :key="item.name"
-                >
-                  <v-list-item-title class="text-grey-darken-3"
-                    >{{ n + 1 }}. {{ item.name }}</v-list-item-title
-                  >
+                <v-list-item style="min-height: 0px" class="font-weight-bold" v-for="(item, n) in n.listWork"
+                  :key="item.name">
+                  <v-list-item-title class="text-grey-darken-3">{{ n + 1 }}. {{ item.name }}</v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-card-text>
@@ -89,10 +73,7 @@
               Mulai terhubung dengan jaringan lebih dari 2 juta tenaga siap
               kerja kami
             </p>
-          </v-col></v-row
-        ></v-container
-      ></v-sheet
-    >
+          </v-col></v-row></v-container></v-sheet>
   </v-parallax>
 
   <v-sheet class="bg-grey-lighten-3">
@@ -106,10 +87,17 @@
             PT Solusi Mitra Pertama telah dipercaya berbagai bisnis lintas
             industri
           </p>
-        </v-col></v-row
-      ></v-container
-    ></v-sheet
-  >
+
+          <v-row>
+            <v-col cols="12" sm="2" xs="2" md="2" v-for="n in 17">
+              <v-card class="mx-auto mt-5 elevation-0 bg-transparent" >
+                <v-card-text>
+                  <v-img height="auto" cover class="rounded-lg my-auto" :src="'/images/client/' + n + '.png'" />
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-col></v-row></v-container></v-sheet>
 </template>
 
 <script>
