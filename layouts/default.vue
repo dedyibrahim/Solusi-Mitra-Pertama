@@ -9,87 +9,78 @@
       <v-icon color="primary" size="30" class="mx-2">mdi-twitter</v-icon>
     </v-system-bar>
 
-    <v-app-bar height="80"  elevation="0">
+    <v-app-bar height="80" elevation="0">
       <template v-slot:prepend>
         <v-app-bar-nav-icon
-        class="d-flex d-sm-none"
-        @click="drawer = !drawer"
-      ></v-app-bar-nav-icon>
-  </template>
-  <v-container class="pa-0 fill-height">
-    
-    
-      <v-img height="auto"   max-width="190" src="/images/logo.png" />
+          class="d-flex d-sm-none"
+          @click="drawer = !drawer"
+        ></v-app-bar-nav-icon>
+      </template>
+      <v-container class="pa-0 fill-height">
+        <v-img height="auto" max-width="190" src="/images/logo.png" />
 
-      <v-tabs v-model="tab" class="ml-7 d-sm-none d-md-flex d-none d-sm-flex d-md-none d-lg-flex" border="10" density="compact" color="primary">
-        <v-tab
-         to="/"
-          slider-color="primary"
-          class="font-weight-bold text-capitalize"
-          >Beranda</v-tab
+        <v-tabs
+          v-model="tab"
+          class="ml-7 d-sm-none d-md-flex d-none d-sm-flex d-md-none d-lg-flex"
+          border="10"
+          density="compact"
+          color="primary"
         >
-         <v-tab
-          to="/bisnis"
-          slider-color="primary"
-          class="font-weight-bold text-capitalize"
-          >Bisnis</v-tab
+          <v-tab
+          v-for="n in menus" :to="n.link" 
+            slider-color="primary"
+            class="font-weight-bold text-capitalize"
+            >{{ n.name }}</v-tab
+          >
+       
+        </v-tabs>
+        <v-spacer class="d-sm-none d-md-flex d-none d-sm-flex"></v-spacer>
+        <v-text-field
+          density="compact"
+          class="mt-5 mx-3"
+          placeholder="Cari Disini"
+          variant="solo"
         >
-        <v-tab
-          to="/mitra"
-          slider-color="primary"
-          class="font-weight-bold text-capitalize"
-          >Mitra Kami</v-tab
-        >
-      </v-tabs>
-      <v-spacer class="d-sm-none d-md-flex d-none d-sm-flex"></v-spacer>
-      <v-text-field
-        density="compact"
-        class="mt-5 mx-3 "
-        placeholder="Cari Disini"
-        variant="solo"
-      >
-        <template v-slot:append-inner>
-          <v-icon color="primary">mdi-magnify</v-icon>
-        </template>
-      </v-text-field>
+          <template v-slot:append-inner>
+            <v-icon color="primary">mdi-magnify</v-icon>
+          </template>
+        </v-text-field>
 
-        <v-btn class="bg-primary text-capitalize d-sm-none d-md-flex d-none d-sm-flex"
+        <v-btn
+          class="bg-primary text-capitalize d-sm-none d-md-flex d-none d-sm-flex"
           >Lamar Kerja
 
           <template v-slot:append>
             <v-icon>mdi-pen</v-icon>
           </template>
         </v-btn>
-     
       </v-container>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer"   temporary>
-      <v-list color="transparent">
-          <v-list-item to="/"  title="Beranda"></v-list-item>
-          <v-list-item to="/bisnis"  title="Bisnis"></v-list-item>
-          <v-list-item to="/mitra"  title="Mitra Kami"></v-list-item>
-        </v-list>
+    <v-navigation-drawer v-model="drawer" temporary>
+      <v-list color="primary">
+        <v-list-item v-for="n in menus" :to="n.link" :title="n.name"></v-list-item>
+      </v-list>
 
-        <template v-slot:append>
-          <div class="pa-2">
-            <v-btn class="bg-primary text-capitalize " block
-          >Lamar Kerja
+      <template v-slot:append>
+        <div class="pa-2">
+          <v-btn class="bg-primary text-capitalize" block
+            >Lamar Kerja
 
-          <template v-slot:append>
-            <v-icon>mdi-pen</v-icon>
-          </template>
-        </v-btn>
-          </div>
-        </template>
+            <template v-slot:append>
+              <v-icon>mdi-pen</v-icon>
+            </template>
+          </v-btn>
+        </div>
+      </template>
     </v-navigation-drawer>
 
     <v-main class="bg-grey-lighten-6">
       <Banner />
-        <NuxtPage/>
+      <NuxtPage />
     </v-main>
 
-     <Footer/>
+    <Footer />
   </v-app>
 </template>
 
@@ -101,6 +92,31 @@ const drawer = ref(null);
 
 <script>
 export default {
-  data: () => ({ drawer: null, tab: null }),
+  data: () => ({
+    drawer: null,
+    tab: null,
+    menus: [
+      {
+        name: "Beranda",
+        link: "/",
+      },
+      {
+        name: "Profil",
+        link: "/Profil",
+      },
+      {
+        name: "Layanan",
+        link: "/Layanan",
+      },
+      {
+        name: "Submit CV",
+        link: "/SubmitCV",
+      },
+      {
+        name: "Kontak",
+        link: "/Kontak",
+      },
+    ],
+  }),
 };
 </script>
