@@ -11,13 +11,13 @@
                 :src="'./images/logo.png'"
               />
               <p class="text-left">
-                Komplek, Jl. Bbd Barat No.69 Blok A4, RT.002/RW.003, Mekarsari, Kec. Cimanggis, Kota Depok, Jawa Barat 16453
+               Gedung Graha Mampang LT.3 Suite 305, Jl.Mampang Perapatan Raya Kav 100,Duren Tiga, Pancoran Jakarta Selatan-12760
               </p>
             </v-col>
             <v-col cols="12" md="9" sm="12">
               <v-card class="bg-primary text-center">
                 <v-card-text class="white--text text-h6 ">
-                  <p class="text-justify text-h6">Selamat datang di PT Solusi Mitra Utama Kami adalah mitra terpercaya dalam layanan outsourcing yang memberikan solusi efisien dan inovatif untuk memenuhi kebutuhan bisnis Anda. Dengan tim profesional dan kualitas terjamin, kami siap membantu perusahaan Anda mencapai tujuan bisnis dengan lebih efektif.
+                  <p class="text-justify text-h6">Selamat datang di PT Solusi Mitra Pertama Kami adalah mitra terpercaya dalam layanan outsourcing yang memberikan solusi efisien dan inovatif untuk memenuhi kebutuhan bisnis Anda. Dengan tim profesional dan kualitas terjamin, kami siap membantu perusahaan Anda mencapai tujuan bisnis dengan lebih efektif.
                   </p></v-card-text>
               </v-card>
             </v-col>
@@ -158,8 +158,8 @@
     data() {
       return {
         items: [
-          { text: "(021) 87351197", icon: "mdi-phone" },
-          { text: "Solusimitrautama@gmail.com", icon: "mdi-mail" }
+          { text: "(021) 87351197 ", icon: "mdi-phone" },
+          { text: "Solusimitrapertama@gmail.com", icon: "mdi-mail" }
         ],
         items2: [
           { text: "Senin-sabtu <br> Pukul 09:00 - 18:00 WIB", icon: "mdi-clock" }
