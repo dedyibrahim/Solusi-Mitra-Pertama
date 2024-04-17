@@ -11,47 +11,29 @@
 
     <v-app-bar height="80" elevation="0">
       <template v-slot:prepend>
-        <v-app-bar-nav-icon
-          class="d-flex d-sm-none"
-          @click="drawer = !drawer"
-        ></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon class="d-flex d-sm-none" @click="drawer = !drawer"></v-app-bar-nav-icon>
       </template>
       <v-container class="pa-0 fill-height">
         <v-img height="auto" max-width="190" src="/images/logo.png" />
 
-        <v-tabs
-          v-model="tab"
-          class="ml-7 d-sm-none d-md-flex d-none d-sm-flex d-md-none d-lg-flex"
-          border="10"
-          density="compact"
-          color="primary"
-        >
-          <v-tab
-          v-for="n in menus" :to="n.link" 
-            slider-color="primary"
-            class="font-weight-bold text-capitalize"
-            >{{ n.name }}</v-tab
-          >
-       
+        <v-tabs v-model="tab" class="ml-7 d-sm-none d-md-flex d-none d-sm-flex d-md-none d-lg-flex" border="10"
+          density="compact" color="primary">
+          <v-tab v-for="n in menus" :to="n.link" slider-color="primary" class="font-weight-bold text-capitalize">{{
+          n.name
+        }}</v-tab>
+
         </v-tabs>
         <v-spacer class="d-sm-none d-md-flex d-none d-sm-flex"></v-spacer>
-        <v-text-field
-          density="compact"
-          class="mt-5 mx-3"
-          placeholder="Cari Disini"
-          variant="solo"
-        >
+        <v-text-field density="compact" class="mt-5 mx-3" placeholder="Cari Disini" variant="solo">
           <template v-slot:append-inner>
             <v-icon color="primary">mdi-magnify</v-icon>
           </template>
         </v-text-field>
 
-        <v-btn
-          class="bg-primary text-capitalize d-sm-none d-md-flex d-none d-sm-flex"
-          >Lamar Kerja
+        <v-btn @click="UploadCV()" class="bg-primary text-capitalize d-sm-none d-md-flex d-none d-sm-flex">Submit CV
 
           <template v-slot:append>
-            <v-icon>mdi-pen</v-icon>
+            <v-icon>mdi-upload</v-icon>
           </template>
         </v-btn>
       </v-container>
@@ -64,11 +46,10 @@
 
       <template v-slot:append>
         <div class="pa-2">
-          <v-btn class="bg-primary text-capitalize" block
-            >Lamar Kerja
+          <v-btn @click="UploadCV()" class="bg-primary text-capitalize" block>Submit CV
 
             <template v-slot:append>
-              <v-icon>mdi-pen</v-icon>
+              <v-icon>mdi-upload</v-icon>
             </template>
           </v-btn>
         </div>
@@ -102,21 +83,24 @@ export default {
       },
       {
         name: "Profil",
-        link: "/Profil",
+        link: "/profil",
       },
       {
         name: "Layanan",
-        link: "/Layanan",
+        link: "/layanan",
       },
-      {
-        name: "Submit CV",
-        link: "/SubmitCV",
-      },
+
       {
         name: "Kontak",
-        link: "/Kontak",
+        link: "/kontak",
       },
     ],
   }),
+  methods: {
+    UploadCV() {
+      const link = "https://docs.google.com/forms/d/e/1FAIpQLSeMU0MKB_D5HX1ocrTD3QxT-pBoW_abChVkGjXOq96AdzUdfg/viewform?usp=sf_link"
+      window.open(link, '_blank');
+    }
+  }
 };
 </script>

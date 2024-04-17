@@ -79,7 +79,7 @@
                 <v-col cols="12" md="3" sm="6"
                   ><v-list density="compact"  class="bg-transparent">
                     <v-list-subheader class="text-primary text-h5"
-                      ><b>LAINNYA</b></v-list-subheader
+                      ><b>Social Media</b></v-list-subheader
                     >
   
                     <v-list-item
@@ -170,41 +170,34 @@
             link:'/'
           },
           {
-            text: "About Us",
-            link:'/'
+            text: "Profil",
+            link:'/profil'
           }
         ],
         menuasn: [
           {
-            text: "Lowongan Kerja",
-            link:'/login'
-          },
-          {
-            text: "Grup Loker",
-            link:'/'
+            text: "Layanan",
+            link:'/layanan'
           },
         ],
         menulainnya: [
           {
-            text: "Pengumuman"
+            text: "Facebook"
+          },
+          {
+            text: "Instagram"
+          },
+          {
+            text: "Twitter"
+          },
+          {
+            text: "LinkedIn"
           },
         ],
         menupanduan: [
           {
-            text: "Hubungi Kami",
-            link:"/"
-          },
-          {
-            text: "Outsorcing",
-            link:"/"
-          },
-          {
-            text: "Customer Service",
-            link:"/"
-          },
-          {
-            text: "Sales Promotor",
-            link:"/"
+            text: "Kontak",
+            link:"/kontak"
           },
         ],
   
