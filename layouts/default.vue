@@ -57,6 +57,7 @@
     </v-navigation-drawer>
 
     <v-main class="bg-grey-lighten-6">
+      <ArrowTop/>
       <Banner />
       <NuxtPage />
     </v-main>

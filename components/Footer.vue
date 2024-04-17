@@ -188,10 +188,6 @@
             text: "Twitter",
             link:'https://twitter.com/solusimitraper1',
           },
-          {
-            text: "LinkedIn",
-            link:'solusimitrapertama',
-          },
         ],
         menupanduan: [
           {
