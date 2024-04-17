@@ -85,7 +85,7 @@
                     <v-list-item
                       v-for="(item, i) in menulainnya"
                       :key="i"
-                      :to="item.link"
+                       @click="OpenSocialMedia(item.link)"
                        :value="item"
                        color="ungu"
                        class="text-ungu"      >
@@ -177,16 +177,20 @@
         ],
         menulainnya: [
           {
-            text: "Facebook"
+            text: "Facebook",
+            link:'https://www.facebook.com/profile.php?id=100071218411647',
           },
           {
-            text: "Instagram"
+            text: "Instagram",
+            link:'https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fsolusimitrapertama%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR3ygl8fgGdMyeMRS3F4qvAtOX94-zk9CmBwoC6YoV_gRXjeVmXrukhBXW0_aem_ATuP4qtwhQ27_W8I4q3m0j5BqtxVFS-NqIAoB1FdnHS2q70AORxWaNpiZhRADBlmfJXVqWcxQhRlXXCT1qZXLNdF&h=AT2FU_Zhcru01mhbNimJ2y23hybNdYQZAKmBoSD0x1q0Ip3mF3WRjifkKZdvqUBFLxagya_iLztRyc4z3OAFH86u0OCdv1Ds3Y8fCTLknTc293b6x50BoSDu1iQCZVgAzkXg',
           },
           {
-            text: "Twitter"
+            text: "Twitter",
+            link:'https://twitter.com/solusimitraper1',
           },
           {
-            text: "LinkedIn"
+            text: "LinkedIn",
+            link:'solusimitrapertama',
           },
         ],
         menupanduan: [
@@ -202,6 +206,9 @@
     methods: {
       goTo(val) {
         this.$router.push({ name: val });
+      },
+      OpenSocialMedia(link){
+        window.open(link, '_blank');
       }
     }
   };
