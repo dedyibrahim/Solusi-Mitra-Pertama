@@ -140,13 +140,8 @@
           </v-row>
           <hr />
           <v-row class="text-ungu">
-            <v-col>&copy; <b>PT Solusi Mitra Pertama 2023</b></v-col>
-            <v-col class="text-right">
-              <a style="text-decoration: none;">Kebijakan Privasi</a> &nbsp;
-              &nbsp;
-              <a style="text-decoration: none;"> Syarat & Katentuan</a>
-            </v-col>
-          </v-row>
+            <v-col>&copy; 2024 <b>PT Solusi Mitra Pertama </b></v-col>
+           </v-row>
         </v-container>
      
       </v-footer>
