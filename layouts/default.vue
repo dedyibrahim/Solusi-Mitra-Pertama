@@ -7,6 +7,7 @@
       <v-icon color="primary" @click="OpenSocialMedia('https://www.facebook.com/profile.php?id=100071218411647')" size="30" class="mx-2">mdi-facebook</v-icon>
       <v-icon color="primary" @click="OpenSocialMedia('https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fsolusimitrapertama%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR3ygl8fgGdMyeMRS3F4qvAtOX94-zk9CmBwoC6YoV_gRXjeVmXrukhBXW0_aem_ATuP4qtwhQ27_W8I4q3m0j5BqtxVFS-NqIAoB1FdnHS2q70AORxWaNpiZhRADBlmfJXVqWcxQhRlXXCT1qZXLNdF&h=AT2FU_Zhcru01mhbNimJ2y23hybNdYQZAKmBoSD0x1q0Ip3mF3WRjifkKZdvqUBFLxagya_iLztRyc4z3OAFH86u0OCdv1Ds3Y8fCTLknTc293b6x50BoSDu1iQCZVgAzkXg')" size="30" class="mx-2">mdi-instagram</v-icon>
       <v-icon color="primary" @click="OpenSocialMedia('https://twitter.com/solusimitraper1')" size="30" class="mx-2">mdi-twitter</v-icon>
+      <v-icon color="primary" @click="OpenSocialMedia('https://www.linkedin.com/in/pt-solusi-mitra-pertama-6275421a5/')" size="30" class="mx-2">mdi-linkedin</v-icon>
     </v-system-bar>
 
     <v-app-bar height="80" elevation="0">
