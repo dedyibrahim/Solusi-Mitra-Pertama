@@ -67,7 +67,7 @@
           </p>
 
           <v-row>
-            <v-col cols="12" sm="1" xs="1" md="2" v-for="n in 17">
+            <v-col cols="12" sm="1" xs="1" md="2" v-for="n in 14">
               <v-hover v-slot="{ isHovering, props }">
               <v-card class="mx-auto mt-5 elevation-0 "   v-bind="props"
                     :elevation="isHovering ? 12 : 2" 
