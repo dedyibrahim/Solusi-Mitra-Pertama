@@ -32,7 +32,7 @@ export default {
           color: "primary",
           title: "Perusahaan Outsourcing & BPO On-Demand Indonesia",
           description:
-            "Solusi Mitra Utama perusahaan outsorcing penyalur tenaga kerja on-demand, kami menyediakan tenaga kerja fleksibel, berpengalaman dan terpercayaa",
+            "Solusi Mitra Pertama perusahaan outsorcing penyalur tenaga kerja on-demand, kami menyediakan tenaga kerja fleksibel, berpengalaman dan terpercayaa",
           src: "./images/banner2.jpg",
         },
         {

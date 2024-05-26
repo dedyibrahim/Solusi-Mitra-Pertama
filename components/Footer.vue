@@ -188,6 +188,10 @@
             text: "Twitter",
             link:'https://twitter.com/solusimitraper1',
           },
+          {
+            text: "LinkedIn",
+            link:'https://www.linkedin.com/in/pt-solusi-mitra-pertama-6275421a5/',
+          },
         ],
         menupanduan: [
           {
