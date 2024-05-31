@@ -19,12 +19,35 @@ export default defineNuxtConfig({
   
 
   },
+  runtimeConfig: {
+    public: {
+      gtm: {
+        id: 'G-X8BTRBB723',
+        queryParams: {
+          gtm_auth: 'AB7cDEf3GHIjkl-MnOP8qr',
+          gtm_preview: 'env-4',
+          gtm_cookies_win: 'x',
+        },
+        defer: false,
+        compatibility: false,
+        nonce: '2726c7f26c',
+        enabled: true,
+        debug: true,
+        loadScript: true,
+        enableRouterSync: true,
+        ignoredViews: ['homepage'],
+        trackOnNextTick: false,
+        devtools: true,
+      }
+    }
+  },
   plugins: [{ src: "~/plugins/animate.js", mode: "client" }],
   css: ['vuetify/lib/styles/main.sass', '@/assets/main.css'],
   build: {
     transpile: ['vuetify'],
   },
   modules: [
+    '@zadigetvoltaire/nuxt-gtm',
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error
