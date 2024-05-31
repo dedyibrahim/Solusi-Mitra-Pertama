@@ -22,7 +22,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       gtm: {
-        id: 'G-X8BTRBB723',
+        id: 'GTM-X8BTRBB723',
         queryParams: {
           gtm_auth: 'AB7cDEf3GHIjkl-MnOP8qr',
           gtm_preview: 'env-4',
