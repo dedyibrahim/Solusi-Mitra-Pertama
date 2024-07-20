@@ -80,7 +80,7 @@
           </p>
 
           <v-row>
-            <v-col cols="12" sm="1" xs="1" md="2" v-for="n in 14">
+            <v-col cols="12" sm="1" xs="1" md="2" v-for="n in 16">
               <v-hover v-slot="{ isHovering, props }">
                 <v-card class="mx-auto mt-5 elevation-0 bg-transparent" v-bind="props" :elevation="isHovering ? 12 : 2" :class="{
           'text-primary on-hover  animate__animated animate__pulse':
