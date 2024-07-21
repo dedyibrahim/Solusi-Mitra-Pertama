@@ -6,8 +6,8 @@
           <v-img height="auto" class="rounded-lg" src="../public/images/service.jpg" />
         </v-col>
         <v-col cols="12" md="6" sm="6" xs="6" @transition-enter="onEnter" @transition-leave="onLeave">
-          <p class="text-h6 font-weight-bold text-ungu">Layanan</p>
-          <p class="text-h4 font-weight-bold text-primary">
+          <p class="text-h6 font-weight-bold text-black">Layanan</p>
+          <p class="text-h4 font-weight-bold text-black">
             PT Solusi Mitra Pertama
           </p>
           <br />
@@ -30,7 +30,7 @@
     <v-container>
       <v-row class="my-16">
         <v-col cols="12" md="12" sm="12" xs="12">
-          <p class="text-h4 text-center font-weight-bold text-primary">
+          <p class="text-h4 text-center font-weight-bold text-black">
             Berikut Daftar Layanan yang Kami Berikan
           </p>
           <p class="text-h6 text-center">
@@ -42,10 +42,10 @@
         <v-col cols="12" sm="1" xs="1" md="4" class="mx-auto text-center" v-for="(n,i) in layanans">
           <v-hover v-slot="{ isHovering, props }" class="text-center">
             <v-avatar  size="100" v-bind="props" :elevation="isHovering ? 12 : 2" :class="{
-          'text-primary on-hover  animate__animated animate__pulse':
+          'text-black on-hover  animate__animated animate__pulse':
             isHovering,
         }" class="mx-auto" width="auto" rounded="10" :image="n.icon"></v-avatar><br>
-            <p class="text-center text-h6 mt-3 font-weight-bold text-ungu">{{ n.name }}</p>
+            <p class="text-center text-h6 mt-3 font-weight-bold text-black">{{ n.name }}</p>
               
            
           </v-hover>
@@ -71,7 +71,7 @@
     <v-container>
       <v-row class="my-16">
         <v-col cols="12" md="12" sm="12" xs="12">
-          <p class="text-h4 text-center font-weight-bold text-primary">
+          <p class="text-h4 text-center font-weight-bold text-black">
             Klien Kami
           </p>
           <p class="text-h6 text-center text-grey-darken-3">
@@ -83,7 +83,7 @@
             <v-col cols="12" sm="1" xs="1" md="2" v-for="n in 16">
               <v-hover v-slot="{ isHovering, props }">
                 <v-card class="mx-auto mt-5 elevation-0 bg-transparent" v-bind="props" :elevation="isHovering ? 12 : 2" :class="{
-          'text-primary on-hover  animate__animated animate__pulse':
+          'text-black on-hover  animate__animated animate__pulse':
             isHovering,
         }">
                   <v-img width="120px"cover class="rounded-lg my-auto" :src="'/images/client/' + n + '.png'" />

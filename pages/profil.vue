@@ -4,8 +4,8 @@
       <v-row class="my-16">
         <v-col cols="12" md="6" sm="6" xs="6"    @transition-enter="onEnter"
           @transition-leave="onLeave">
-          <p class="text-h6 font-weight-bold text-ungu">About Us</p>
-          <p class="text-h4 font-weight-bold text-primary">
+          <p class="text-h6 font-weight-bold text-black">About Us</p>
+          <p class="text-h4 font-weight-bold text-black">
             PT Solusi Mitra Pertama
           </p>
           <br />
@@ -30,11 +30,11 @@
     <v-container>
       <v-row class="my-16">
         <v-col cols="12" md="6" sm="12" xs="12">
-             <p class="text-center text-h3 text-primary font-weight-bold ">Visi</p>
+             <p class="text-center text-h3 text-black font-weight-bold ">Visi</p>
               <p class="text-h6 text-justify mt-4">Menjadi Perusahaan Penyedia TAD dan SDM Yang professional Terpercaya, Terpilih dan Berkualitas</p>
         </v-col>
         <v-col cols="12" md="6" sm="12" xs="12">
-             <p class="text-center text-h3 text-primary font-weight-bold">Misi</p>
+             <p class="text-center text-h3 text-black font-weight-bold">Misi</p>
              <p class="text-h6 text-justify mt-4">Peningkatan Kualitas, Kuantitas, dan Variasi Produk dengan tetap mempertahankan Input sumber daya yang ada dengan menjalankan proyek yang efisien dari segi waktu dan biaya dengan dukungan tim yang solid.</p>
         </v-col>
       </v-row>
@@ -58,7 +58,7 @@
     <v-container>
       <v-row class="my-16">
         <v-col cols="12" md="12" sm="12" xs="12">
-          <p class="text-h4 text-center font-weight-bold text-primary">
+          <p class="text-h4 text-center font-weight-bold text-black">
             Klien Kami
           </p>
           <p class="text-h6 text-center text-grey-darken-3">
@@ -72,7 +72,7 @@
               <v-card class="mx-auto mt-5 elevation-0 bg-transparent my-auto"   v-bind="props"
                     :elevation="isHovering ? 12 : 2" 
                     :class="{
-                      'text-primary on-hover  animate__animated animate__pulse':
+                      'text-black on-hover  animate__animated animate__pulse':
                         isHovering,
                     }">
                   <v-img  width="120px" cover class="rounded-lg my-auto" :src="'/images/client/' + n + '.png'" />
